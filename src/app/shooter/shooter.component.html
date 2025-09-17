@@ -1,0 +1,26 @@
+<div class="hud">
+  <div class="box">
+    Score: <span>{{ score() }}</span>
+  </div>
+  <div class="box">
+    Lives: <span>{{ lives() }}</span>
+  </div>
+  <button class="btn" (click)="start()">Start / Restart</button>
+</div>
+
+<div #gameHost class="game-host" role="application" aria-label="Pixi Shooter Canvas"></div>
+
+<!-- Touch controls -->
+@if(isTouch){
+<div class="controls">
+  <button class="ctl" (touchstart)="press('left', true)" (touchend)="press('left', false)">
+    ◀
+  </button>
+  <button class="ctl" (touchstart)="press('shoot', true)" (touchend)="press('shoot', false)">
+    ●
+  </button>
+  <button class="ctl" (touchstart)="press('right', true)" (touchend)="press('right', false)">
+    ▶
+  </button>
+</div>
+}
