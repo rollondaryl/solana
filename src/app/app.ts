@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ShooterComponent } from './shooter/shooter.component';
 
 @Component({
-  selector: '<app-root></app-root>',
+  selector: 'app-root',
   standalone: true,
   imports: [ShooterComponent],
   template: `
