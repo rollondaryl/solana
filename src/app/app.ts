@@ -1,30 +1,50 @@
+// import { Component } from '@angular/core';
+// import { ShooterComponent } from './shooter/shooter.component';
+
+// @Component({
+//   selector: 'app-root',
+//   standalone: true,
+//   imports: [ShooterComponent],
+//   template: `
+//     <div class="app-shell">
+//       <app-shooter />
+//     </div>
+//   `,
+//   styles: [
+//     `
+//       .app-shell {
+//         min-height: 100dvh;
+//         background: #0b0f1a;
+//         color: #e6eef8;
+//         font-family: Inter, system-ui, Arial, sans-serif;
+//       }
+//       h1 {
+//         margin: 0;
+//         padding: 16px;
+//         font-size: clamp(16px, 2.2vw, 22px);
+//         font-weight: 600;
+//       }
+//     `,
+//   ],
+// })
+// export class App {}
+
 import { Component } from '@angular/core';
-import { ShooterComponent } from './shooter/shooter.component';
+import { FinderComponent } from './finder/finder.component'; // <-- add
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ShooterComponent],
+  imports: [FinderComponent], // <-- add
   template: `
     <div class="app-shell">
-      <app-shooter />
+      <h1>#Finder — 60s object hunt</h1>
+      <app-finder />
     </div>
   `,
-  styles: [
-    `
-      .app-shell {
-        min-height: 100dvh;
-        background: #0b0f1a;
-        color: #e6eef8;
-        font-family: Inter, system-ui, Arial, sans-serif;
-      }
-      h1 {
-        margin: 0;
-        padding: 16px;
-        font-size: clamp(16px, 2.2vw, 22px);
-        font-weight: 600;
-      }
-    `,
-  ],
+  styles: [`
+    .app-shell { min-height: 100dvh; background:#0b0f1a; color:#e6eef8; font-family: Inter, system-ui, Arial, sans-serif; }
+    h1 { margin: 0; padding: 16px; font-size: clamp(16px, 2.2vw, 22px); font-weight: 600; }
+  `]
 })
-export class App {}
+export class AppComponent {}

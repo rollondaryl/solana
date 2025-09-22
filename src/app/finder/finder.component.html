@@ -1,0 +1,7 @@
+<div class="hud">
+  <div class="box">Found: <strong>{{ found() }}</strong></div>
+  <div class="box">Time: <strong>{{ timeLeft()}}</strong></div>
+  <button class="btn" (click)="start()">Start / Restart</button>
+</div>
+
+<div #gameHost class="game-host" role="application" aria-label="Find-the-object game canvas"></div>
